@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="shell">
+    <div class="card">
+      <div class="top">
+        <div class="brand">
+          <img src="icons/icon-512.png" class="logo-img" alt="CareBridge logo">
+
+          <div>
+            <h1 class="title">CareBridge</h1>
+            <p class="tagline">Offline-first symptom triage prototype</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="top-actions">
+          <button class="primary top-btn" onclick="startCheck()">Start Symptom Check</button>
+          <button class="top-btn" onclick="showAbout()">About CareBridge</button>
+          <button class="top-btn" id="installBtn" style="display:none;">Install App</button>
+        </div>
+
+        <div id="app" class="app"></div>
+
+        <p class="disclaimer">
+          ⚠️ This is a prototype for guidance only, not a medical diagnosis tool. If symptoms feel severe, seek professional care.
+        </p>
+      </div>
+    </div>
+
+    <p class="footer">Built for 3MTT NextGen Knowledge Showcase • MVP Prototype</p>
+  </div>
+
+  <script src="app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>

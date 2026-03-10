@@ -1,0 +1,216 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f4f8fb;
+  color: #0f172a;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+}
+
+p{
+  margin: 10px 0;
+  color: #475569;
+  font-weight: 400;
+}
+
+.shell{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  gap: 14px;
+}
+
+.card{
+  width: 100%;
+  max-width: 1320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 24px;
+}
+
+.top{
+  padding: 0;
+}
+
+.brand{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.logo-img{
+  width: 36px;
+  height: 36px;
+  margin-right: 2px;
+  flex-shrink: 0;
+}
+
+.title{
+  margin: 0;
+  font-size: 22px;
+  color: #1e88e5;
+}
+
+.tagline{
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px 0 0 0;
+}
+
+.app{
+  margin-top: 4px;
+}
+
+button{
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+button:active{
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.primary{
+  width: 100%;
+  background: #1e88e5;
+  color: white;
+}
+
+.primary:hover{
+  background: #1565c0;
+}
+
+.top-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.top-btn{
+  flex: 1;
+  min-width: 180px;
+}
+
+.top-actions .primary{
+  width: auto;
+}
+
+.actions{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-top: 12px;
+}
+
+@media (min-width: 420px){
+  .actions{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.actions button{
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+#symptomList button{
+  background: white;
+  color: #0f172a;
+  border: 1px solid #dbe5ef;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+#symptomList button:hover{
+  border-color: #1e88e5;
+  background: #f8fbff;
+}
+
+#searchSymptoms{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe5ef;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+#searchSymptoms:focus{
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30,136,229,0.15);
+}
+
+.disclaimer{
+  margin-top: 18px;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.footer{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.urgent{
+  color: white;
+  background-color: #e53935;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.moderate{
+  color: #0f172a;
+  background-color: #fdd835;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.mild{
+  color: white;
+  background-color: #43a047;
+  padding: 15px;
+  border-radius: 10px;
+}
