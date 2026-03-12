@@ -226,8 +226,15 @@ button:active{
 .install-link{
   font-size: 12px;
   color: #1e88e5;
-  text-decoration: underline;
   cursor: pointer;
-  white-space: nowrap;
-  margin: 10px 0;
+  text-decoration: underline;
+  padding: 0;
+  border: none;
+  background: none;
+  display: inline;
+  font-weight: 500;
+}
+
+.install-link:hover{
+  color: #1565c0;
 }

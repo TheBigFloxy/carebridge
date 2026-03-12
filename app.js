@@ -21,7 +21,7 @@ function updateInstallButton(){
 
   if(deferredPrompt){
     installArea.innerHTML = `
-      <button onclick="installCareBridge()">📲 Install CareBridge</button>
+      <button onclick="installCareBridge()"> Install CareBridge</button>
     `;
   } else {
     installArea.innerHTML = "";
