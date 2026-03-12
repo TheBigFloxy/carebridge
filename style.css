@@ -214,3 +214,20 @@ button:active{
   padding: 15px;
   border-radius: 10px;
 }
+
+.bottom-meta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.install-link{
+  font-size: 12px;
+  color: #1e88e5;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 10px 0;
+}
