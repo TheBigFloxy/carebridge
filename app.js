@@ -807,6 +807,10 @@ function snakeBiteResult(){
       </ul>
     </div>
 
+    <p style="font-size:12px; color:#64748b; margin-top:10px;">
+  ${t("generatedBy")} • ${new Date().toLocaleTimeString()}
+</p>
+
     <div class="actions" style="margin-top:12px;">
       <button onclick="newAssessment()">${t("newAssessment")}</button>
       <button onclick="goHome()">${t("home")}</button>
