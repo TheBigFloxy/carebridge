@@ -15,23 +15,31 @@
         <div class="brand">
           <img src="icons/icon-512.png" class="logo-img" alt="CareBridge logo">
 
-          <div>
+          <div class="brand-text">
             <h1 class="title">CareBridge</h1>
-            <p class="tagline">Offline-first symptom triage prototype</p>
+            <p class="tagline" id="taglineText">Offline-first symptom triage prototype</p>
+
+            <div class="language-switch">
+              <button class="lang-btn active" id="lang-en" onclick="setLanguage('en')">English</button>
+              <button class="lang-btn" id="lang-pidgin" onclick="setLanguage('pidgin')">Pidgin</button>
+              <button class="lang-btn" id="lang-yo" onclick="setLanguage('yo')">Yoruba</button>
+              <button class="lang-btn" id="lang-ha" onclick="setLanguage('ha')">Hausa</button>
+              <button class="lang-btn" id="lang-ig" onclick="setLanguage('ig')">Igbo</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="content">
         <div class="top-actions">
-          <button class="primary top-btn" onclick="startCheck()">Start Symptom Check</button>
-          <button class="top-btn" onclick="showAbout()">About CareBridge</button>
+          <button class="primary top-btn" id="startBtn" onclick="startCheck()">Start Symptom Check</button>
+          <button class="top-btn" id="aboutBtn" onclick="showAbout()">About CareBridge</button>
         </div>
 
         <div id="app" class="app"></div>
 
         <div class="bottom-meta">
-          <p class="disclaimer">
+          <p class="disclaimer" id="disclaimerText">
             ⚠️ This is a prototype for guidance only, not a medical diagnosis tool. If symptoms feel severe, seek professional care.
           </p>
 
@@ -40,7 +48,7 @@
       </div>
     </div>
 
-    <p class="footer">Built for 3MTT NextGen Knowledge Showcase • MVP Prototype</p>
+    <p class="footer" id="footerText">Built for 3MTT NextGen Knowledge Showcase • MVP Prototype</p>
   </div>
 
   <script src="app.js"></script>

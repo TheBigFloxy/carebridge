@@ -53,7 +53,12 @@ p{
 .brand{
   display: flex;
   gap: 12px;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.brand-text{
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-img{
@@ -73,6 +78,42 @@ p{
   margin: 4px 0 0 0;
   font-size: 13px;
   color: #475569;
+}
+
+.language-switch{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.lang-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: #1e88e5;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.lang-btn:hover{
+  color: #1565c0;
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}
+
+.lang-btn:active{
+  box-shadow: none;
+  transform: none;
+}
+
+.lang-btn.active{
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .content{
@@ -233,8 +274,19 @@ button:active{
   background: none;
   display: inline;
   font-weight: 500;
+  white-space: nowrap;
+  margin: 10px 0;
 }
 
 .install-link:hover{
   color: #1565c0;
+}
+
+.coming-soon-text{
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.28);
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 28px 0;
 }
