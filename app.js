@@ -832,51 +832,222 @@ function cancerComingSoon(){
 
 /* ===================== RESULT ===================== */
 
-function getEnglishSteps(level){
-  const data = {
-    urgent: [
-      "Go to the nearest hospital or clinic now.",
-      "If you cannot move easily, ask someone to help you get care.",
-      "Avoid self-medicating with unknown drugs."
-    ],
-    moderate: [
-      "Rest and stay hydrated.",
-      "Avoid triggers where relevant.",
-      "If symptoms persist or worsen in 24 to 48 hours, visit a clinic."
-    ],
-    mild: [
-      "Rest and hydrate.",
-      "Use safe basic care where appropriate.",
-      "If symptoms do not improve, reassess or visit a clinic."
-    ]
-  };
-  return data[level];
-}
+const resultGuidance = {
+  en: {
+    urgent: {
+      steps: [
+        "Go to the nearest hospital or clinic immediately.",
+        "If you cannot move easily, ask someone to help you get care.",
+        "Do not take unknown medications."
+      ],
+      redFlags: [
+        "Difficulty breathing",
+        "Confusion or fainting",
+        "Convulsions",
+        "Severe swelling spreading",
+        "Persistent vomiting or signs of dehydration"
+      ]
+    },
+    moderate: {
+      steps: [
+        "Rest and stay well hydrated.",
+        "Avoid anything that may worsen the symptoms.",
+        "If symptoms persist or worsen within 24 to 48 hours, visit a clinic."
+      ],
+      redFlags: [
+        "Pain getting worse quickly",
+        "New swelling",
+        "High fever developing",
+        "Vomiting begins or increases"
+      ]
+    },
+    mild: {
+      steps: [
+        "Rest and stay hydrated.",
+        "Use safe basic care where appropriate.",
+        "If symptoms do not improve, reassess or visit a clinic."
+      ],
+      redFlags: [
+        "Symptoms getting worse instead of improving",
+        "Severe pain starting",
+        "Swelling appearing",
+        "High fever developing"
+      ]
+    }
+  },
 
-function getEnglishRedFlags(level){
-  const data = {
-    urgent: [
-      "Difficulty breathing",
-      "Confusion or fainting",
-      "Convulsions",
-      "Severe swelling spreading",
-      "Persistent vomiting or dehydration signs"
-    ],
-    moderate: [
-      "Pain getting worse rapidly",
-      "New swelling",
-      "High fever developing",
-      "Vomiting starts or increases"
-    ],
-    mild: [
-      "Symptoms worsen instead of improving",
-      "Severe pain starts",
-      "Swelling appears",
-      "High fever develops"
-    ]
-  };
-  return data[level];
-}
+  pidgin: {
+    urgent: {
+      steps: [
+        "Go the nearest hospital or clinic immediately.",
+        "If you no fit move well, make person help you reach hospital.",
+        "No take drugs wey you no know."
+      ],
+      redFlags: [
+        "Problem to breathe",
+        "Confusion or fainting",
+        "Convulsions",
+        "Severe swelling wey dey spread",
+        "Continuous vomiting or body dehydration"
+      ]
+    },
+    moderate: {
+      steps: [
+        "Rest and drink enough water.",
+        "Avoid anything wey fit make am worse.",
+        "If e no better or e worsen within 1–2 days, go clinic."
+      ],
+      redFlags: [
+        "Pain dey increase fast",
+        "New swelling",
+        "High fever start",
+        "Vomiting start or increase"
+      ]
+    },
+    mild: {
+      steps: [
+        "Rest and drink water.",
+        "Use simple and safe care.",
+        "If e no better, check again or go clinic."
+      ],
+      redFlags: [
+        "Symptoms dey worse instead of better",
+        "Serious pain start",
+        "Swelling show",
+        "High fever start"
+      ]
+    }
+  },
+
+  yo: {
+    urgent: {
+      steps: [
+        "Lọ sí ilé-iwosan tó sunmọ́ jù lọ lẹsẹkẹsẹ.",
+        "Tí o kò bá lè rìn dáadáa, bẹ ẹnikan lọwọ lati ran ọ lọwọ.",
+        "Má ṣe lo oogun tí o kò mọ."
+      ],
+      redFlags: [
+        "Ìṣòro mimi",
+        "Ìyàlẹnu tàbí ìṣubú",
+        "Warapa",
+        "Wiwu to lagbara tí ń tan kaakiri",
+        "Eebi tí kò dúró tàbí aini omi"
+      ]
+    },
+    moderate: {
+      steps: [
+        "Sinmi ki o mu omi to.",
+        "Yago fun ohun tó lè buru si i.",
+        "Tí kò bá dara si láàárín ọjọ́ kan sí méjì, lọ sí ilé-iwosan."
+      ],
+      redFlags: [
+        "Irora ń pọ si ni kánkán",
+        "Wiwu tuntun",
+        "Iba giga bẹ̀rẹ̀",
+        "Eebi bẹ̀rẹ̀ tàbí ń pọ si"
+      ]
+    },
+    mild: {
+      steps: [
+        "Sinmi ki o mu omi.",
+        "Lo itọju rọrun ati ailewu.",
+        "Tí kò bá dara si, tún ayẹwo ṣe tàbí lọ sí ilé-iwosan."
+      ],
+      redFlags: [
+        "Aami aisan ń buru si dipo kó dara",
+        "Irora to lagbara bẹ̀rẹ̀",
+        "Wiwu hàn",
+        "Iba giga bẹ̀rẹ̀"
+      ]
+    }
+  },
+
+  ha: {
+    urgent: {
+      steps: [
+        "Je asibiti ko cibiyar lafiya mafi kusa nan da nan.",
+        "Idan ba za ka iya motsi da sauƙi ba, ka nemi taimako.",
+        "Kada ka sha magungunan da ba ka sani ba."
+      ],
+      redFlags: [
+        "Wahalar numfashi",
+        "Rikicewa ko suma",
+        "Farfaɗiya",
+        "Mummunan kumburi mai yaɗuwa",
+        "Amai mai tsanani ko rashin ruwa"
+      ]
+    },
+    moderate: {
+      steps: [
+        "Ka huta kuma ka sha ruwa sosai.",
+        "Ka guji abin da zai iya ƙara tsananta lamarin.",
+        "Idan ba a samu sauƙi cikin kwana 1–2 ba, je asibiti."
+      ],
+      redFlags: [
+        "Ciwo yana ƙaruwa da sauri",
+        "Sabon kumburi",
+        "Zazzabi mai ƙarfi ya fara",
+        "Amai yana ƙaruwa"
+      ]
+    },
+    mild: {
+      steps: [
+        "Ka huta kuma ka sha ruwa.",
+        "Yi amfani da kulawa mai sauƙi da aminci.",
+        "Idan ba a samu sauƙi ba, sake dubawa ko je asibiti."
+      ],
+      redFlags: [
+        "Alamun suna ƙaruwa maimakon raguwa",
+        "Mummunan ciwo ya fara",
+        "Kumburi ya bayyana",
+        "Zazzabi mai ƙarfi ya fara"
+      ]
+    }
+  },
+
+  ig: {
+    urgent: {
+      steps: [
+        "Gaa ụlọ ọgwụ kacha nso ozugbo.",
+        "Ọ bụrụ na ịnweghị ike ịkwaga nke ọma, rịọ enyemaka.",
+        "Ekwela iji ọgwụ ndị ị na-amaghị ama."
+      ],
+      redFlags: [
+        "Nsogbu iku ume",
+        "Mgbagwoju anya ma ọ bụ ịda mba",
+        "Ịma jijiji",
+        "Ọzịza siri ike na-agbasa",
+        "Ịkwụpụ ihe ugboro ugboro ma ọ bụ enweghị mmiri"
+      ]
+    },
+    moderate: {
+      steps: [
+        "Zuo ike ma ṅụọ mmiri nke ọma.",
+        "Zere ihe ọ bụla nwere ike ime ka ọ ka njọ.",
+        "Ọ bụrụ na ọ naghị mma n'ime ụbọchị 1–2, gaa ụlọ ọgwụ."
+      ],
+      redFlags: [
+        "Mgbu na-akawanye njọ ngwa ngwa",
+        "Ọzịza ọhụrụ",
+        "Fever dị elu amalite",
+        "Ịkwụpụ ihe na-abawanye"
+      ]
+    },
+    mild: {
+      steps: [
+        "Zuo ike ma ṅụọ mmiri.",
+        "Jiri nlekọta dị mfe ma dị nchebe.",
+        "Ọ bụrụ na ọ naghị mma, nyochaa ọzọ ma ọ bụ gaa ụlọ ọgwụ."
+      ],
+      redFlags: [
+        "Mgbaàmà na-akawanye njọ kama ịka mma",
+        "Mgbu siri ike amalite",
+        "Ọzịza apụta",
+        "Fever dị elu amalite"
+      ]
+    }
+  }
+};
 
 function showResult(level){
   currentView = { screen: "result", data: { level } };
